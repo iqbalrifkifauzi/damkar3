@@ -185,14 +185,12 @@
 									</div>
 
 									<div class="control-group">
-										<label class="control-label">Uraian Retribusi</label>
+										<label class="control-label">Jumlah Apar</label>
 										<div class="controls">
-											<textarea class="span12 wysihtml5 m-wrap" rows="6" name="uraian_retribusi" id="uraian_retribusi" value="<?php echo $uraian_retribusi;?>" ><?php echo $uraian_retribusi;?></textarea>
-											
+											<input type="text" name="uraian_retribusi" id="uraian_retribusi" class="span6 m-wrap" value="<?php echo $uraian_retribusi;?>" />
 										</div>
 									</div>
-
-				
+			
 
 									<div class="control-group">
 										<label class="control-label">Nominal Retribusi</label>

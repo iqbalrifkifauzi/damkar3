@@ -362,7 +362,7 @@ class ga_model extends CI_Model {
 
 	//Awal Laporan
 	function GetTahunPendataan () {
-		return $this->db->query("select tahun_pendataan from tbl_sptrd group by tahun_pendataan order by tahun_pendataan asc");
+		return $this->db->query("select a.* from tbl_perpanjang_retribusi a order by a.id_perpanjangan_retribusi desc");
 	}
 
 	function GetTahunpendataanTahun ($tahun) {

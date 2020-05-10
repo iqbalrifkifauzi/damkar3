@@ -1691,11 +1691,13 @@ class ga extends CI_Controller {
 
 	//Awal Laporan
 
+
+
 	public function laporan_tahun_pendataan() {
 
 		
 
-			$data['data_tahun'] =  $this->ga_model->GetTahunPendataan();
+			$data['data_bayar'] =  $this->ga_model->GetTahunPendataan();
 			// $data['data_lising'] =  $this->ga_model->GetMasterLising();
 			$this->template_dua->load('template_dua','ga/sistem/laporan/laporan_tahun_pendataan',$data);
 
@@ -1860,11 +1862,11 @@ class ga extends CI_Controller {
 		
 	}
 
-	public function laporan_tahun_status_stnk_excel () {
+	public function laporan_tahun_status_sptrd_excel () {
 		
 
 			header("Content-type: application/octet-stream");
-			header("Content-Disposition: attachment; filename=laporan_tahun_status_stnk_excel.xls");
+			header("Content-Disposition: attachment; filename=laporan_tahun_status_sptrd_excel.xls");
 			header("Pragma: no-cache");
 			header("Expires: 0");
 
@@ -1878,8 +1880,8 @@ class ga extends CI_Controller {
 			$data['data_status'] =  $status;
 			
 
-			$data['data_sptrd'] =  $this->ga_model->GetStnkTahunStatus($tahun,$status);
-			$this->load->view('ga/sistem/laporan/laporan_tahun_status_stnk_cetak',$data);
+			$data['data_sptrd'] =  $this->ga_model->GetSptrdTahunStatus($tahun,$status);
+			$this->load->view('ga/sistem/laporan/laporan_tahun_status_sptrd_cetak',$data);
 			
 
 		
@@ -2086,5 +2088,14 @@ class ga extends CI_Controller {
 
 	}
 	//Akhir Laporan PAJAK STNK Tahun
+
+		public function Cluster() {
+		
+
+			$this->template_dua->load('template_dua','ga/sistem/k-means/KMeans');
+		
+		
+	}
+
 	
 }

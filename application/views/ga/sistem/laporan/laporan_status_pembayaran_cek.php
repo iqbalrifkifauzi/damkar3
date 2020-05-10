@@ -1,5 +1,5 @@
 <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
-<a  class="btn green" href="<?php echo base_url();?>ga/laporan_status_kendaraan_excel/<?php echo $data_status;?>" >
+<a  class="btn green" href="<?php echo base_url();?>ga/laporan_status_pembayaran_excel/<?php echo $data_status;?>" >
 													Cetak Excel <i class="icon-print"></i>
 													</a> 
 
